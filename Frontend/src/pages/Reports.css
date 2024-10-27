@@ -1,0 +1,24 @@
+.reports-container {
+    margin: 20px;
+  }
+  
+  .reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .reports-table th, .reports-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .reports-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .reports-table td {
+    text-align: center;
+  }
+  

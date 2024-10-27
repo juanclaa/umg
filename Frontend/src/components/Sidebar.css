@@ -1,0 +1,168 @@
+/* src/components/Sidebar.css */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+/* Estilo del sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: width 0.3s ease;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/* Sidebar.css */
+
+.submenu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submenu-items {
+  padding-left: 20px; /* Sangría para los elementos hijos */
+}
+
+.submenu-items li {
+  list-style: none;
+ /* background-color: #f7f7f7*/
+}
+/* Estilo del elemento Administración */
+.submenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  color: #333; /* Mismo color que los demás enlaces */
+  cursor: pointer;
+  text-decoration: none;
+ /* background-color: #f7f7f7;*/
+  font-size: 1em; /* Asegúrate de que el tamaño de fuente coincida */
+}
+
+/* Hover para que combine con el resto */
+.submenu:hover {
+  /*background-color: #f7f7f7; /* Color de fondo cuando se pasa el mouse */
+  color: #151e27; /* Color de texto cuando se pasa el mouse */
+}
+
+/* Espacio y formato en los subelementos */
+.submenu-items {
+  padding-left: 20px; /* Indentar los subelementos */
+}
+
+/* Estilo para subelementos como enlaces normales */
+.submenu-items li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em; /* Tamaño un poco menor si deseas distinguirlos */
+  display: flex;
+  align-items: center;
+}
+
+.submenu-items li a:hover {
+  color: #151e27;
+}
+
+
+.sidebar ul li {
+  margin-bottom: 10px; /* Añade espacio entre los elementos del menú */
+}
+
+/* Sidebar colapsado */
+.sidebar.collapsed {
+  width: 80px;
+  align-items: center;
+}
+
+/* Estilo del botón para colapsar/expandir */
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: -25px;
+  background-color: #151e27;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo de los enlaces del menú */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  width: 100%;
+  margin-bottom: 0; 
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  /*background-color: #f7f7f7;*/
+  border-radius: 8px;
+  border: none; 
+  position: relative;
+  overflow: hidden; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+
+
+/* Animación de llenado de color */
+.sidebar ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Inicia desde fuera del enlace */
+  width: 100%;
+  height: 100%;
+  background-color: #87b9f185; /* Color de fondo en hover */
+  transition: left 0.3s ease; /* Transición para que se mueva */
+  z-index: 0; /* Asegurarse de que el fondo esté debajo del texto */
+}
+
+/* Al hacer hover, el fondo se llena de izquierda a derecha */
+.sidebar ul li a:hover::before {
+  left: 0; /* Mueve el fondo al estado visible */
+}
+
+/* Estilo del texto e icono cuando se hace hover */
+.sidebar ul li a:hover {
+  color: rgb(70, 60, 60); /* Color del texto cuando se hace hover */
+  position: relative;
+  z-index: 1; /* Mantiene el texto encima del fondo animado */
+}
+
+/* Ocultar el texto cuando el sidebar está colapsado */
+.sidebar.collapsed ul li a span {
+  display: none;
+}

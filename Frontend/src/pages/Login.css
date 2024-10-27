@@ -1,0 +1,239 @@
+/* src/pages/Login.css */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+/* Fondo degradado en tonos celestes y azules */
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0d414d, #2193b0); /* Fondo degradado para la página */
+  }
+  
+  /* Contenedor principal de login que ocupe toda la pantalla */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* Ocupar el 100% del ancho */
+    height: 100%; /* Ocupar el 100% de la altura */
+    background: inherit; /* Fondo degradado heredado de html/body */
+  }
+  /* Caja de login con fondo semi-transparente */
+  .login-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto de flotación en la caja de login */
+  .login-box:hover {
+    transform: translateY(-10px); /* Eleva la caja al pasar el mouse */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  }
+  
+  /* Icono principal grande en la parte superior */
+  .icon-container {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* Estilos de los campos de entrada */
+  .input-group {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 25px; /* Bordes redondeados */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .input-group i {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .input-group input {
+    background: transparent;
+    border: none;
+    color: white;
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder con color semi-transparente */
+  }
+  
+  .input-group input:focus {
+    outline: none;
+  }
+  
+  /* Botón de login y registro - mismos estilos */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .login-button, .register-button {
+    width: 48%;
+    padding: 12px;
+    background-color: #6cb2eb; /* Color celeste para ambos botones */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .login-button:hover, .register-button:hover {
+    background-color: #4a90e2; /* Azul más oscuro al hacer hover */
+    transform: translateY(-5px); /* Eleva ligeramente el botón en hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+  }
+  
+  /* Opciones debajo de los botones */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .options a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .options a:hover {
+    text-decoration: underline;
+  }
+  
+  .options label {
+    font-size: 12px;
+    color: white;
+  }
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0d414d, #2193b0);
+  }
+  
+  .register-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .register-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .input-group i {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .input-group input, .input-group select {
+    background: transparent;
+    border: none;
+    color: white;
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .input-group input::placeholder, .input-group select {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .input-group input:focus, .input-group select:focus {
+    outline: none;
+  }
+  
+  /* Estilos para el grupo de botones */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .register-button, .cancel-button {
+    width: 48%;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Botón de registro */
+  .register-button {
+    background-color: #6cb2eb;
+    color: white;
+    border: none;
+  }
+  
+  .register-button:hover {
+    background-color: #4a90e2;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Botón de cancelar */
+  .cancel-button {
+    background-color: #f0f0f0;
+    color: #4a90e2;
+    border: none;
+  }
+  
+  .cancel-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Mensaje de error */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
